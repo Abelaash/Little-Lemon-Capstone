@@ -1,31 +1,17 @@
-import { Link } from 'react-router-dom';
-import restaurantFoodImage from './assets/restaurant-food.jpg';
-import './Hero.css';
-import pages from '../../../utils/pages';
+import Hero from './Hero';
+import WeekSpecials from './WeekSpecials';
+import Testimonials from './Testimonials';
+import OurStory from './OurStory';
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="hero">
-      <div className="container grid">
-        <div className="hero-information">
-          <h1>Little Lemon</h1>
-          <h2>Chicago</h2>
-          <p>
-            We are a family owned Mediterranean restaurant, 
-            focused on traditional recipes served with a modern twist.
-          </p>
-          <Link className="button-primary" to={pages.get('bookings').path}>
-            Reserve a table
-          </Link>
-        </div>
-        <img 
-          className="hero-image" 
-          src={restaurantFoodImage} 
-          alt="Restaurant food" 
-        />
-      </div>
-    </section>
+    <>
+      <Hero />
+      <WeekSpecials />
+      <Testimonials />
+      <OurStory />
+    </>
   );
 };
 
-export default Hero;
+export default Home;
